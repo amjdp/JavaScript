@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hollow Triangle Star Pattern</title>
 </head>
 
 <body>
@@ -13,7 +13,27 @@
 
     <script>
 
-       
+        let n = 6;
+        let string = "";
+
+        for (let i = 1; i <= n; i++) {
+            // printing star
+            for (let j = 0; j < i; j++) {
+                if (i === n) {
+                    string += "*";
+                }
+                else {
+                    if (j == 0 || j == i - 1) {
+                        string += "*";
+                    }
+                    else {
+                        string += " ";
+                    }
+                }
+            }
+            string += "\n";
+        }
+        console.log(string);
 
     </script>
 
