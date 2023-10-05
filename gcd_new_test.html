@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findGCD(a, b) {
+        // Set a and b to positive integers
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        // Swap values if a < b
+        if (a < b) {
+          [a, b] = [b, a];
+        }
+
+        // Use Euclid's algorithm to find GCD
+        while (b !== 0) {
+          let temp = b;
+          b = a % b;
+          a = temp;
+        }
+
+        // Return the GCD or HCF
+        return a;
+      }
+
+      console.log(findGCD(0, 6));
+       // Output: 6
+     // console.log(findGCD(24, 36)); // Output: 12
+    </script>
+  </body>
+</html>
