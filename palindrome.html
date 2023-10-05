@@ -24,22 +24,38 @@
 
                 // check if first and last string are same
                 if (string[i] !== string[len - 1 - i]) {
-                    return 'It is not a palindrome';
+                    return `${string} is a palindrome`;
                 }
             }
-            return 'It is a palindrome';
+            return `${string} is not a palindrome`;
         }
 
         // take input
         const string = prompt('Enter a string: ');
 
         // call the function
-        const value = checkPalindrome(string);
+      //  const value = checkPalindrome(string);
 
-        document.write(value);
+       // document.write(value);
+        document.write(checkPalindrome(string));
 
     </script>
 
 </body>
 
 </html>
+
+<!-- 
+function checkPalindrome(string) {
+    var string = argv[0];
+    const len = string.length;
+    for (let i = 0; i < len / 2; i++) {
+      if (string[i] !== string[len - 1 - i]) {
+        return `${string} is a palindrome`;
+      }
+    }
+    return `${string} is not a palindrome`;
+  }
+
+  const value = checkPalindrome(string);
+  document.write(value); -->

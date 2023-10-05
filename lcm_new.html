@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function gcd(a, b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+      }
+
+      // Function to return LCM of two numbers
+      function lcm(a, b) {
+        return (a / gcd(a, b)) * b;
+      }
+
+      // Driver program to test above function
+
+      let a = 5,
+        b = 7;
+      document.write("LCM of " + a + " and " + b + " is " + lcm(a, b));
+    </script>
+  </body>
+</html>
